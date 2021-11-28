@@ -1,0 +1,42 @@
+button {
+  border: none;
+  border-radius: 35px;
+  padding: 1.5vh 4.5vw 1.5vh 3.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  column-gap: 10px;
+  span {
+    font-family: DM Sans, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  &.primary {
+    color: #FFFFFF;
+    background: linear-gradient(273.78deg, #B70217 4.51%, #D14F5E 99.02%);
+  }
+}
+
+@media (max-width: 1264px) {
+  button {
+    border-radius: 25px;
+    padding: 1.5vh 4.5vw 1.5vh 3.5vw;
+  }
+}
+
+@media (max-width: 960px) {
+  button {
+    padding: 1vh 7vw;
+    .icon {
+      display: none;
+    }
+  }
+}
