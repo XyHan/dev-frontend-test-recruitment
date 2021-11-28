@@ -1,0 +1,17 @@
+<header>
+  <nav>
+    <ul>
+      <li *ngFor="let link of breadcrumb; let isFirst = first;">
+        <a *ngIf="(isHome && isFirst) || !isHome" [routerLink]="[link.url]">{{ link.title }}</a>
+      </li>
+    </ul>
+  </nav>
+  <section>
+    <span>{{ musicsAmount }} Musics</span>
+    <span>
+      {{ musicsDownloadable }}
+      <h6>Downloadable</h6>
+    </span>
+  </section>
+  <div></div>
+</header>

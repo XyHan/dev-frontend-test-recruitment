@@ -1,4 +1,4 @@
-div {
+main {
   display: flex;
   flex-direction: row;
 
@@ -62,7 +62,7 @@ div {
 }
 
 @media (max-width: 600px) {
-  div {
+  main {
     aside {
       display: none;
     }

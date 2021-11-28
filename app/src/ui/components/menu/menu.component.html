@@ -1,0 +1,29 @@
+<aside>
+  <img class="logo" src="./assets/logo/logo-leadersleague.svg" alt="Logo Origami" />
+  <nav>
+    <ul>
+      <li>
+        <a
+          [routerLink]="['/home']"
+          [routerLinkActive]="['active-link']"
+          #rla1="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <img src="../../../assets/icon/home/home-{{ rla1.isActive ? 'red' : 'grey' }}.svg" alt="Home icon" />
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['/musics']"
+          [routerLinkActive]="['active-link']"
+          #rla2="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <img src="../../../assets/icon/music/music-{{ rla2.isActive ? 'red' : 'grey' }}.svg" alt="Music icon" />
+          <span>Musics</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>

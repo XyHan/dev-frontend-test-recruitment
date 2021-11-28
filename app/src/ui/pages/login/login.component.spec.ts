@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LoginComponent } from './login.component';
+import { ButtonComponent } from '../../components/button/button.component';
 
 describe('LoginComponent', () => {
   const titleAbove = 'Bienvenue sur ORIGAMI ! Connectez-vous en cliquant ci-dessous à l\'aide de votre compte interne.';
@@ -12,7 +13,8 @@ describe('LoginComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        LoginComponent
+        LoginComponent,
+        ButtonComponent,
       ],
     }).compileComponents();
   });
