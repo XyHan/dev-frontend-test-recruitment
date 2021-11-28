@@ -10,6 +10,7 @@ button {
   box-sizing: border-box;
   width: 100%;
   column-gap: 10px;
+  cursor: pointer;
   span {
     font-family: DM Sans, Arial, serif;
     font-size: 16px;
@@ -18,6 +19,9 @@ button {
     line-height: 21px;
     letter-spacing: 0;
     text-align: left;
+  }
+  &:focus {
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   &.primary {
     color: #FFFFFF;

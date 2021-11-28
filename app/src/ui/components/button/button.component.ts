@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import {Component, Inject, Input} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-button',
@@ -15,7 +16,10 @@ export class ButtonComponent {
   @Input()
   public class: string;
 
-  constructor() {
+  private _router: Router;
+
+  constructor(@Inject(Router) router: Router) {
+    this._router = router;
     this.title = 'MyButton';
     this.icon = `
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +35,7 @@ export class ButtonComponent {
     iconEl.innerHTML = this.icon;
   }
 
-  onClick(): void {
-    console.log('TOTO');
+  async onClick(): Promise<void> {
+    await this._router.navigate(['']);
   }
 }
