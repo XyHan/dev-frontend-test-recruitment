@@ -1,0 +1,9 @@
+<article>
+  <img *ngIf="media" src="{{ media }}" alt="{{ title }}" />
+  <div>
+    <span *ngIf="header">{{ header }}</span>
+    <h2 *ngIf="title">{{ title }}</h2>
+    <p *ngIf="content">{{ content }}</p>
+    <a *ngIf="link" href="{{ link }}" >More infos</a>
+  </div>
+</article>

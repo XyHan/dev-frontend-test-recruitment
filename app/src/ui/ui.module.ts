@@ -9,6 +9,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AppComponent } from './layout/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderComponent } from './components/header/header.component';
     MusicComponent,
     ButtonComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

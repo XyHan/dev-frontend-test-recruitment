@@ -1,0 +1,13 @@
+article {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  border: 1px solid #E5E5E5;
+  img {
+    border-radius: 4px;
+    margin: 0 2vw 0 1vw;
+  }
+}
