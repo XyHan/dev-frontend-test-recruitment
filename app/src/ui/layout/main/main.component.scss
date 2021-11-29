@@ -1,7 +1,7 @@
 main {
   width: 100vw;
   height: 100vh;
-  background-color: #F7F7F7;
+  background-color: var(--app-secondary-background);
   display: flex;
   flex-direction: row;
   align-items: flex-start;

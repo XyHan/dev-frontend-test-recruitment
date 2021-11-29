@@ -7,6 +7,7 @@ aside {
   width: 17vw;
   height: 100vh;
   padding-top: 3vh;
+  background-color: var(--app-primary-background);
   .logo {
     margin-left: 2.5vw;
   }
@@ -36,9 +37,13 @@ aside {
           color: #828282;
           padding: 1.5vh 3vw;
           margin-bottom: 1.5vh;
+          img {
+            width: 20px;
+            height: 18px;
+          }
           &.active-link {
-            border-right: 3px solid #B70217;
-            color: #B70217;
+            border-right: 3px solid var(--app-active-text);
+            color: var(--app-active-text);
           }
         }
       }

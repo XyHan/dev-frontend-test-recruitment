@@ -6,12 +6,5 @@
       </li>
     </ul>
   </nav>
-  <section>
-    <span>{{ musicsAmount }} Musics</span>
-    <span>
-      {{ musicsDownloadable }}
-      <h6>Downloadable</h6>
-    </span>
-  </section>
-  <div></div>
+  <img (click)="switchTheme()" src="{{ currentTheme === 'light' ? moonIconPath : sunIconPath }}" alt="Theme icon" />
 </header>

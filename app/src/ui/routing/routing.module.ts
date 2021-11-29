@@ -7,6 +7,7 @@ import { MusicComponent } from '../pages/music/music.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LoginComponent },
   {
     path: '',
     component: MainComponent,

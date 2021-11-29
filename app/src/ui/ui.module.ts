@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RoutingModule } from './routing/routing.module';
+import { AppModule } from '../infrastructure/app/app.module';
 import { MainComponent } from './layout/main/main.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -25,7 +26,8 @@ import { CardComponent } from './components/card/card.component';
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    RoutingModule,
+    AppModule
   ],
   providers: [],
   bootstrap: [AppComponent]

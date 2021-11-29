@@ -11,7 +11,16 @@
           #rla1="routerLinkActive"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <img src="../../../assets/icon/home/home-{{ rla1.isActive ? 'red' : 'grey' }}.svg" alt="Home icon" />
+          <img
+            *ngIf="currentTheme === 'light'"
+            src="../../../assets/icon/home/home-{{ rla1.isActive ? 'red' : 'grey' }}.svg"
+            alt="Home icon"
+          />
+          <img
+            *ngIf="currentTheme === 'dark'"
+            src="../../../assets/icon/home/home-{{ rla1.isActive ? 'light-grey' : 'grey' }}.svg"
+            alt="Home icon"
+          />
           <span>Home</span>
         </a>
       </li>
@@ -22,8 +31,32 @@
           #rla2="routerLinkActive"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <img src="../../../assets/icon/music/music-{{ rla2.isActive ? 'red' : 'grey' }}.svg" alt="Music icon" />
+          <img
+            *ngIf="currentTheme === 'light'"
+            src="../../../assets/icon/music/music-{{ rla2.isActive ? 'red' : 'grey' }}.svg"
+            alt="Music icon"
+          />
+          <img
+            *ngIf="currentTheme === 'dark'"
+            src="../../../assets/icon/music/music-{{ rla2.isActive ? 'light-grey' : 'grey' }}.svg"
+            alt="Music icon"
+          />
           <span>Musics</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/logout']">
+          <img
+            *ngIf="currentTheme === 'light'"
+            src="../../../assets/icon/logout/logout-grey.svg"
+            alt="Logout icon"
+          />
+          <img
+            *ngIf="currentTheme === 'dark'"
+            src="../../../assets/icon/logout/logout-lightgrey.svg"
+            alt="Logout icon"
+          />
+          <span>Déconnexion</span>
         </a>
       </li>
     </ul>
