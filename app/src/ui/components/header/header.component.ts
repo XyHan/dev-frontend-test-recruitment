@@ -54,14 +54,6 @@ export class HeaderComponent implements OnInit {
     return this._breadcrumb;
   }
 
-  get sunIconPath(): string {
-    return this._sunIconPath;
-  }
-
-  get moonIconPath(): string {
-    return this._moonIconPath;
-  }
-
   get currentTheme(): ThemeType | null {
     return this._currentTheme;
   }

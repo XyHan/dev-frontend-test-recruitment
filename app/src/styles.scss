@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body, body[data-theme="light"] {
+  --app-theme-img: url('/assets/icon/moon.svg') no-repeat;
   --login-primary-background: #F2F2F2;
   --login-secondary-background: #FFFFFF;
   --app-primary-background: #F7F7F7;
@@ -8,6 +9,7 @@ body, body[data-theme="light"] {
   --app-grey-text: #828282;
 }
 body[data-theme="dark"] {
+  --app-theme-img: url('/assets/icon/sun.svg') no-repeat;
   --login-primary-background: #323540;
   --login-secondary-background: #242731;
   --app-primary-background: #323540;

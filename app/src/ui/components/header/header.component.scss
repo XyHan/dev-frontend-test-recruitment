@@ -41,8 +41,11 @@ header {
       }
     }
   }
-  img {
-    padding: 1vw;
+  button {
+    width: 2.5vw;
+    height: 2.5vh;
+    border: none;
+    background: var(--app-theme-img);
     &:hover {
       cursor: pointer;
     }
