@@ -5,6 +5,7 @@ body, body[data-theme="light"] {
   --login-secondary-background: #FFFFFF;
   --app-primary-background: #F7F7F7;
   --app-active-text: #B70217;
+  --app-grey-text: #828282;
 }
 body[data-theme="dark"] {
   --login-primary-background: #323540;
@@ -12,6 +13,7 @@ body[data-theme="dark"] {
   --app-primary-background: #323540;
   --app-secondary-background: #242731;
   --app-active-text: #F1E8E9;
+  --app-grey-text: #828282;
 }
 
 body,

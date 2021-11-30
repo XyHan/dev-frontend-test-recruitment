@@ -8,19 +8,12 @@
         <a
           [routerLink]="['/home']"
           [routerLinkActive]="['active-link']"
-          #rla1="routerLinkActive"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <img
-            *ngIf="currentTheme === 'light'"
-            src="../../../assets/icon/home/home-{{ rla1.isActive ? 'red' : 'grey' }}.svg"
-            alt="Home icon"
-          />
-          <img
-            *ngIf="currentTheme === 'dark'"
-            src="../../../assets/icon/home/home-{{ rla1.isActive ? 'light-grey' : 'grey' }}.svg"
-            alt="Home icon"
-          />
+          <svg class="home-svg" width="18" height="16" viewBox="0 0 20 22" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.38606 0.210648C9.74717 -0.0702159 10.2528 -0.0702159 10.6139 0.210648L19.6139 7.21065C19.8575 7.4001 20 7.69141 20 8V19C20 19.7957 19.6839 20.5587 19.1213 21.1213C18.5587 21.6839 17.7957 22 17 22H3C2.20435 22 1.44129 21.6839 0.87868 21.1213C0.31607 20.5587 0 19.7957 0 19V8C0 7.69141 0.142473 7.4001 0.386059 7.21065L9.38606 0.210648ZM2 8.48908V19C2 19.2652 2.10536 19.5196 2.29289 19.7071C2.48043 19.8946 2.73478 20 3 20H17C17.2652 20 17.5196 19.8946 17.7071 19.7071C17.8946 19.5196 18 19.2652 18 19V8.48908L10 2.26686L2 8.48908Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 11C6 10.4477 6.44772 10 7 10H13C13.5523 10 14 10.4477 14 11V21C14 21.5523 13.5523 22 13 22C12.4477 22 12 21.5523 12 21V12H8V21C8 21.5523 7.55228 22 7 22C6.44772 22 6 21.5523 6 21V11Z" />
+          </svg>
           <span>Home</span>
         </a>
       </li>
@@ -28,35 +21,24 @@
         <a
           [routerLink]="['/musics']"
           [routerLinkActive]="['active-link']"
-          #rla2="routerLinkActive"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <img
-            *ngIf="currentTheme === 'light'"
-            src="../../../assets/icon/music/music-{{ rla2.isActive ? 'red' : 'grey' }}.svg"
-            alt="Music icon"
-          />
-          <img
-            *ngIf="currentTheme === 'dark'"
-            src="../../../assets/icon/music/music-{{ rla2.isActive ? 'light-grey' : 'grey' }}.svg"
-            alt="Music icon"
-          />
+          <svg class="music-svg" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.0329 14.8035V3.45535" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.4311 11.3901L13.0329 14.804L9.63477 11.3901" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.75923 1.19406V12.5422" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.36121 4.60749L4.75935 1.1936L8.1575 4.60749" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span>Musics</span>
         </a>
       </li>
       <li>
         <a [routerLink]="['/logout']">
-          <img
-            *ngIf="currentTheme === 'light'"
-            src="../../../assets/icon/logout/logout-grey.svg"
-            alt="Logout icon"
-          />
-          <img
-            *ngIf="currentTheme === 'dark'"
-            src="../../../assets/icon/logout/logout-lightgrey.svg"
-            alt="Logout icon"
-          />
-          <span>Déconnexion</span>
+          <svg class="logout-svg" width="18" height="16" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 384.971 384.971" fill="#828282">
+            <path d="M180.455,360.91H24.061V24.061h156.394c6.641,0,12.03-5.39,12.03-12.03s-5.39-12.03-12.03-12.03H12.03 C5.39,0.001,0,5.39,0,12.031V372.94c0,6.641,5.39,12.03,12.03,12.03h168.424c6.641,0,12.03-5.39,12.03-12.03 C192.485,366.299,187.095,360.91,180.455,360.91z" />
+            <path d="M381.481,184.088l-83.009-84.2c-4.704-4.752-12.319-4.74-17.011,0c-4.704,4.74-4.704,12.439,0,17.179l62.558,63.46H96.279 c-6.641,0-12.03,5.438-12.03,12.151c0,6.713,5.39,12.151,12.03,12.151h247.74l-62.558,63.46c-4.704,4.752-4.704,12.439,0,17.179 c4.704,4.752,12.319,4.752,17.011,0l82.997-84.2C386.113,196.588,386.161,188.756,381.481,184.088z" />
+          </svg>
+          <span>Logout</span>
         </a>
       </li>
     </ul>

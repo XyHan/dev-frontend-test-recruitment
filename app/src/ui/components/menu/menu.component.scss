@@ -37,13 +37,30 @@ aside {
           color: #828282;
           padding: 1.5vh 3vw;
           margin-bottom: 1.5vh;
-          img {
-            width: 20px;
-            height: 18px;
+          .home-svg {
+            fill: var(--app-grey-text);
+            stroke: none;
+          }
+          .music-svg {
+            fill: var(--app-grey-text);
+            stroke: var(--app-grey-text);
+          }
+          .logout-svg {
+            fill: var(--app-grey-text);
+            stroke: var(--app-grey-text);
           }
           &.active-link {
+            border-radius: 3px;
             border-right: 3px solid var(--app-active-text);
             color: var(--app-active-text);
+            .home-svg {
+              fill: var(--app-active-text);
+              stroke: none;
+            }
+            .music-svg {
+              fill: var(--app-active-text);
+              stroke: var(--app-active-text);
+            }
           }
         }
       }
