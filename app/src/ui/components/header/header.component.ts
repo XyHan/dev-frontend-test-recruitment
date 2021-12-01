@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
     this._sunIconPath = './assets/icon/sun.svg';
     this._moonIconPath = './assets/icon/moon.svg';
     this._themeManager = themeManager;
-    this._currentTheme = 'light';
+    this._currentTheme = null;
   }
 
   ngOnInit(): void {

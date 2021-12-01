@@ -61,3 +61,15 @@ div {
     }
   }
 }
+
+@media (max-width: 1264px) {
+  div {
+    height: 90vh;
+    section {
+      height: 50vh;
+    }
+    aside {
+      height: 50vh;
+    }
+  }
+}

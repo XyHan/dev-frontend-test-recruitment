@@ -7,7 +7,6 @@ aside {
   width: 17vw;
   height: 100vh;
   padding-top: 3vh;
-  background-color: var(--app-primary-background);
   .logo {
     margin-left: 2.5vw;
   }
@@ -60,6 +59,34 @@ aside {
             .music-svg {
               fill: var(--app-active-text);
               stroke: var(--app-active-text);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  aside {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    nav {
+      ul {
+        li {
+          height: 6vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--login-primary-background);
+          border-bottom: 1px solid var(--login-secondary-background);
+          a {
+            margin-bottom: 0;
+            height: 6vh;
+            &.active-link {
+              border-radius: 0;
             }
           }
         }

@@ -2,14 +2,17 @@
 
 body, body[data-theme="light"] {
   --app-theme-img: url('/assets/icon/moon.svg') no-repeat;
+  --app-menu-logo: url('/assets/logo/logo-leadersleague.png') no-repeat;
   --login-primary-background: #F2F2F2;
   --login-secondary-background: #FFFFFF;
   --app-primary-background: #F7F7F7;
+  --app-secondary-background: #F7F7F7;
   --app-active-text: #B70217;
   --app-grey-text: #828282;
 }
 body[data-theme="dark"] {
   --app-theme-img: url('/assets/icon/sun.svg') no-repeat;
+  --app-menu-logo: url('/assets/logo/logo-leadersleague-white.png') no-repeat;
   --login-primary-background: #323540;
   --login-secondary-background: #242731;
   --app-primary-background: #323540;

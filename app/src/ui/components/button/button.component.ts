@@ -1,5 +1,5 @@
-import {Component, Inject, Input} from '@angular/core';
-import {Router} from "@angular/router";
+import { Component, Inject, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button',
@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class ButtonComponent {
   @Input()
-  public title: string;
+  public title: string | null;
 
   @Input()
   public icon: string | null;
@@ -20,7 +20,7 @@ export class ButtonComponent {
 
   constructor(@Inject(Router) router: Router) {
     this._router = router;
-    this.title = 'MyButton';
+    this.title = null;
     this.icon = null;
     this.class = 'primary';
   }

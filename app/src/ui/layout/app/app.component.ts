@@ -1,4 +1,5 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemeType } from '../../../domain/manager/theme.manager.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,6 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 export class AppComponent implements OnInit {
   ngOnInit(): void {
     const body = (document.querySelector('body') as HTMLElement);
-    if (body) body.setAttribute('data-theme', 'light');
+    if (body) body.setAttribute('data-theme', localStorage.getItem('theme') as ThemeType);
   }
 }

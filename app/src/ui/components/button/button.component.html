@@ -1,4 +1,4 @@
 <button [className]="class" type="button" (click)="onClick()">
   <img *ngIf="icon" src="{{ icon }}" alt="Button icon" />
-  <span>{{ title }}</span>
+  <span *ngIf="title">{{ title }}</span>
 </button>
