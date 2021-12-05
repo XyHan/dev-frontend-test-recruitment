@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -7,19 +7,25 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input()
-  public header: string;
+  public header: string | undefined;
 
   @Input()
-  public footer: string;
+  public footer: string | undefined;
 
   @Input()
-  public title: string;
+  public title: string | undefined;
 
   @Input()
-  public content: string;
+  public content: string | undefined | null;
 
   @Input()
-  public media: string;
+  public media: string | undefined;
+
+  @Input()
+  public durationMin: number;
+
+  @Input()
+  public durationSec: number;
 
   constructor() {
     this.header = 'Genre of the music';
@@ -27,5 +33,7 @@ export class CardComponent {
     this.title = 'Title lorem ipsum';
     this.content = 'Description of the music';
     this.media = './assets/img/card-default.jpg';
+    this.durationMin = 0;
+    this.durationSec = 0;
   }
 }

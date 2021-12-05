@@ -9,18 +9,18 @@
 <div class="underline"></div>
 <div>
   <section>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+    <ul>
+      <li *ngFor="let track of tracks">
+        <app-card
+          [title]="track.title"
+          [header]="track.genre"
+          [content]="track.description"
+          [media]="track.media"
+          [durationMin]="track.durationMin"
+          [durationSec]="track.durationSec"
+        ></app-card>
+      </li>
+    </ul>
   </section>
   <aside>
     <h4>Filters</h4>

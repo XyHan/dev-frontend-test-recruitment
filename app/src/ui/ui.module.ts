@@ -11,6 +11,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { AppComponent } from './layout/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../infrastructure/shared/shared.module';
+import { MusicModule } from '../infrastructure/music/music.module';
 
 @NgModule({
   declarations: [
@@ -26,8 +29,11 @@ import { CardComponent } from './components/card/card.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RoutingModule,
-    AppModule
+    AppModule,
+    SharedModule,
+    MusicModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

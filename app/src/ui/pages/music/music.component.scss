@@ -49,10 +49,20 @@
     section {
       width: 55vw;
       height: 86vh;
-      display: flex;
-      flex-direction: column;
       overflow-y: auto;
       overflow-x: hidden;
+      ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        li {
+          width: 100%;
+          list-style-type: none;
+        }
+      }
       h1 {
         margin: 0;
       }
@@ -79,6 +89,9 @@
         height: 78vh;
         margin: 0;
         padding: 0 2%;
+        ul {
+          gap: 5px;
+        }
       }
       aside {
         display: none;

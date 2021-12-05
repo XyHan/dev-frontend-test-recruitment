@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeType } from '../../../domain/manager/theme.manager.interface';
+import { ThemeType } from '../../../domain/app/manager/theme.manager.interface';
 
 @Component({
   selector: 'app-root',

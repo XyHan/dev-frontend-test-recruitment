@@ -1,4 +1,4 @@
-import { ThemeManagerInterface, ThemeType } from '../../../domain/manager/theme.manager.interface';
+import { ThemeManagerInterface, ThemeType } from '../../../domain/app/manager/theme.manager.interface';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
