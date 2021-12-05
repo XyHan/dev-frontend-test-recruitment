@@ -21,15 +21,11 @@ export class CardComponent {
   @Input()
   public media: string;
 
-  @Input()
-  public link: string;
-
   constructor() {
     this.header = 'Genre of the music';
     this.footer = 'Title lorem ipsum';
     this.title = 'Title lorem ipsum';
     this.content = 'Description of the music';
     this.media = './assets/img/card-default.jpg';
-    this.link = '/musics';
   }
 }

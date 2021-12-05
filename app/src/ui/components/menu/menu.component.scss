@@ -4,8 +4,6 @@ aside {
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
-  width: 17vw;
-  height: 100vh;
   padding-top: 3vh;
   .logo {
     margin-left: 2.5vw;
@@ -69,12 +67,16 @@ aside {
 
 @media (max-width: 1260px) {
   aside {
-    width: 100vw;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+    padding-top: 40vh;
+    gap: 23vh;
     nav {
       ul {
+        border: 1px solid var(--login-secondary-background);
+        li:last-child {
+          border-bottom: none
+        }
         li {
           height: 6vh;
           display: flex;
