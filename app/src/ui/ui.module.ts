@@ -14,6 +14,7 @@ import { CardComponent } from './components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../infrastructure/shared/shared.module';
 import { MusicModule } from '../infrastructure/music/music.module';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MusicModule } from '../infrastructure/music/music.module';
     ButtonComponent,
     MenuComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

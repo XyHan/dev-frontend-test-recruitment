@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, Observable } from 'rxjs';
+import { catchError, map, Observable, throwError, timeout } from 'rxjs';
 import { TrackInterface } from '../../../domain/music/model/track/track.model';
 import { MusicQueryRepositoryException } from './music.query.repository.exception';
 import { MusicQueryRepositoryInterface } from '../../../domain/music/repository/music.query.repository.interface';
@@ -22,6 +22,10 @@ export class MusicQueryRepository implements MusicQueryRepositoryInterface {
     return this._httpClient
       .get<TrackInterface[]>(`${BASE_URL}/search?query=baauer b2b&app_name=EXAMPLEAPP`)
       .pipe(
+        timeout({
+          each: 5000,
+          with: () => throwError(new MusicQueryRepositoryException('Cannot retrieve tracks - timeout'))
+        }),
         map((response: any) => {
           if (!response?.data) throw new MusicQueryRepositoryException(`MusicQueryRepository - listAll - no data`);
           return response.data.map((track: any) => {
@@ -32,7 +36,10 @@ export class MusicQueryRepository implements MusicQueryRepositoryInterface {
             ;
           });
         }),
-        catchError((error) => { throw new MusicQueryRepositoryException(`MusicQueryRepository - listAll - ${error.message}`); })
+        catchError((error) => {
+          console.error('MusicQueryRepository - listAll', error.message);
+          throw new MusicQueryRepositoryException(`MusicQueryRepository - listAll - ${error.message}`);
+        })
       );
   }
 }

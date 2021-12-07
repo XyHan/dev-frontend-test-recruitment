@@ -9,7 +9,9 @@
 <div class="underline"></div>
 <div>
   <section>
-    <ul>
+    <app-error *ngIf="error" [message]="error.message"></app-error>
+    <p *ngIf="loading && !error">Loading...</p>
+    <ul *ngIf="!error">
       <li *ngFor="let track of tracks">
         <app-card
           [title]="track.title"
