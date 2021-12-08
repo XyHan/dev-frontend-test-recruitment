@@ -3,7 +3,6 @@ import { MusicServiceInterface } from '../../../domain/music/service/music.servi
 import { MusicService } from '../../../infrastructure/music/service/music.service';
 import { PaginatedListInterface } from '../../../domain/shared/model/paginated-list.model';
 import { TrackModelView } from '../../../infrastructure/music/model-view/track.model-view';
-import {startWith} from "rxjs";
 
 @Component({
   selector: 'app-music',

@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { MenuServiceInterface } from '../../../domain/app/service/menu.service.interface';
-import { MenuService } from '../../../infrastructure/app/service/menu.service';
+import { MenuServiceInterface } from '../../../../domain/app/service/menu.service.interface';
+import { MenuService } from '../../../../infrastructure/app/service/menu.service';
 
 @Component({
   selector: 'app-menu',

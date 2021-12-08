@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ThemeManager } from '../../../infrastructure/app/manager/theme.manager';
-import { ThemeManagerInterface, ThemeType } from '../../../domain/app/manager/theme.manager.interface';
+import { ThemeManager } from '../../../../infrastructure/app/manager/theme.manager';
+import { ThemeManagerInterface, ThemeType } from '../../../../domain/app/manager/theme.manager.interface';
 
 @Component({
   selector: 'app-header',

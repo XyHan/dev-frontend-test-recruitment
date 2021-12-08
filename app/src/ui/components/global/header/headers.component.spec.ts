@@ -26,17 +26,17 @@ describe('HeaderComponent', () => {
     expect(app.isHome).toBeTruthy();
   });
 
-  it(`should have musicsAmount as 1420`, () => {
-    const fixture = TestBed.createComponent(HeaderComponent);
-    const app = fixture.componentInstance;
-    expect(app.musicsAmount).toEqual(1420);
-  });
-
-  it(`should have musicsDownloadable as 288`, () => {
-    const fixture = TestBed.createComponent(HeaderComponent);
-    const app = fixture.componentInstance;
-    expect(app.musicsDownloadable).toEqual(288);
-  });
+  // it(`should have musicsAmount as 1420`, () => {
+  //   const fixture = TestBed.createComponent(HeaderComponent);
+  //   const app = fixture.componentInstance;
+  //   expect(app.musicsAmount).toEqual(1420);
+  // });
+  //
+  // it(`should have musicsDownloadable as 288`, () => {
+  //   const fixture = TestBed.createComponent(HeaderComponent);
+  //   const app = fixture.componentInstance;
+  //   expect(app.musicsDownloadable).toEqual(288);
+  // });
 
   it('should render musics amounts', () => {
     const fixture = TestBed.createComponent(HeaderComponent);

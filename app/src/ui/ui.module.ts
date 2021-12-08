@@ -7,14 +7,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MusicComponent } from './pages/music/music.component';
 import { ButtonComponent } from './components/button/button.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { MenuComponent } from './components/global/menu/menu.component';
 import { AppComponent } from './layout/app/app.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/global/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../infrastructure/shared/shared.module';
 import { MusicModule } from '../infrastructure/music/music.module';
-import { ErrorComponent } from './components/error/error.component';
+import { ErrorComponent } from './components/global/error/error.component';
+import { FilterComponent } from './components/music/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ErrorComponent } from './components/error/error.component';
     MenuComponent,
     HeaderComponent,
     CardComponent,
-    ErrorComponent
+    ErrorComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
