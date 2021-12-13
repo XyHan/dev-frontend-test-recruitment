@@ -38,7 +38,7 @@
     width: 1vw;
     height: 2px;
     background-color: #4F4F4F;
-      margin: 1vh 2.2vw;
+    margin: 1vh 2.2vw;
   }
   div {
     display: flex;
@@ -68,11 +68,8 @@
       }
     }
     aside {
-      background-color: #c11919;
       width: 20vw;
-      h1 {
-        margin: 0;
-      }
+      margin: 1vh 0;
     }
   }
 
@@ -84,7 +81,11 @@
       width: 5vw;
     }
     div {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       section {
+        order: 2;
         width: 100%;
         height: 78vh;
         margin: 0;
@@ -94,7 +95,8 @@
         }
       }
       aside {
-        display: none;
+        width: 96%;
+        order: 1
       }
     }
   }

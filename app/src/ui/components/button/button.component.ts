@@ -29,8 +29,4 @@ export class ButtonComponent {
     const iconEl = (document.querySelector('button .icon') as HTMLElement);
     if (iconEl && this.icon) iconEl.innerHTML = this.icon;
   }
-
-  async onClick(): Promise<void> {
-    await this._router.navigate(['']);
-  }
 }

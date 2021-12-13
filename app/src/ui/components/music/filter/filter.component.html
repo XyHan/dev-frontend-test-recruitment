@@ -1,3 +1,7 @@
+<h1>Filters</h1>
+<div class="underline"></div>
+<p>Rechercher et filter la base de données</p>
 <form>
-  <input type="text" name="search" placeholder="search">
+  <input type="text" name="search" placeholder="Search music name">
 </form>
+<app-button [title]="buttonTitle" [icon]="buttonIcon" [class]="buttonClass" (click)="search()"></app-button>

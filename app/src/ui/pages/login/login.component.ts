@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  private readonly _router: Router;
   private readonly _titleAbove: string;
   private readonly _titleBelow: string;
   private readonly _logoPath: string;
@@ -13,7 +15,8 @@ export class LoginComponent {
   private readonly _buttonIcon: string;
   private readonly _buttonClass: string;
 
-  constructor() {
+  constructor(@Inject(Router) router: Router) {
+    this._router = router;
     this._titleAbove = 'Bienvenue sur ORIGAMI ! Connectez-vous en cliquant ci-dessous à l\'aide de votre compte interne.';
     this._titleBelow = 'Pour plus de renseignement contactez votre administrateur.';
     this._logoPath = './assets/logo/logo-leadersleague.png';
@@ -44,5 +47,9 @@ export class LoginComponent {
 
   get buttonClass(): string {
     return this._buttonClass;
+  }
+
+  async onClick(): Promise<void> {
+    await this._router.navigate(['']);
   }
 }

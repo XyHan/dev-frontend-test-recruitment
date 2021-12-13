@@ -1,0 +1,57 @@
+:host {
+  width: 100%;
+  height: 100%;
+  padding: 25px 20px;
+  background-color: var(--app-primary-background);
+  border: 1px solid var(--app-card-border);
+  border-radius: 4px;
+  font-family: Ubuntu, Arial, serif;
+  font-weight: normal;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  h1 {
+    margin: 0;
+    padding: 0;
+    color: var(--app-side-block-title);
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .underline {
+    width: 1vw;
+    height: 2px;
+    background-color: var(--app-side-block-title);
+    margin: 5px 0;
+  }
+  p {
+    font-size: 10px;
+    color: var(--app-side-block-title);
+    margin: 20px 0;
+  }
+  form {
+    width: 100%;
+    input {
+      width: 100%;
+      height: 35px;
+      border-radius: 5px;
+      border: none;
+      background: var(--app-input-background) url('/assets/icon/search.svg') no-repeat scroll 7px 7px;
+      padding-left: 35px;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+  ::ng-deep.search-btn {
+    width: 80%;
+    max-width: 300px;
+    margin: 25px auto 0 auto;
+  }
+  @media (max-width: 1260px) {
+    .underline {
+      width: 5vw;
+    }
+  }
+}

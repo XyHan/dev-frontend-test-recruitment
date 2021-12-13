@@ -7,17 +7,21 @@ body, body[data-theme="light"] {
   --login-secondary-background: #FFFFFF;
   --app-primary-background: #F7F7F7;
   --app-secondary-background: #F7F7F7;
+  --app-input-background: #FFFFFF;
   --app-active-text: #B70217;
   --app-grey-text: #828282;
   --app-title-text: #212121;
   --app-subtitle-text: #828282;
   --app-card-border: #E5E5E5;
+  --app-second-text: #4F4F4F;
+  --app-side-block-title: #4F4F4F;
 }
 body[data-theme="dark"] {
   --app-theme-img: url('/assets/icon/sun.svg') no-repeat center;
   --app-menu-logo: url('/assets/logo/logo-leadersleague-white.png') no-repeat;
   --login-primary-background: #323540;
   --login-secondary-background: #242731;
+  --app-input-background: #F7F7F7;
   --app-primary-background: #323540;
   --app-secondary-background: #242731;
   --app-active-text: #F1E8E9;
@@ -25,6 +29,7 @@ body[data-theme="dark"] {
   --app-title-text: #FFFFFF;
   --app-subtitle-text: #B4B4B4;
   --app-card-border: #1B1C1F;
+  --app-side-block-title: #B4B4B4;
 }
 
 body,
