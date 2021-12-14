@@ -42,7 +42,7 @@ export class MusicComponent implements OnInit {
 
   private listAllTracks(search: string): void {
     this._musicService
-      .listAllPaginated(1, 6, search)
+      .listAllPaginated(1, 100, search)
       .subscribe(
         (paginatedTracks: PaginatedListInterface) => {
           this._tracks = paginatedTracks.items;

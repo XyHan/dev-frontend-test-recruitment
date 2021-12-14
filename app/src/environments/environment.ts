@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  audius: {
+    baseUrl: 'https://discoveryprovider.audius2.prod-us-west-2.staked.cloud/v1/tracks',
+  }
 };
 
 /*

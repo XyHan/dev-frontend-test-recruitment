@@ -6,21 +6,21 @@ import { MusicQueryRepositoryException } from './music.query.repository.exceptio
 import { MusicQueryRepositoryInterface } from '../../../domain/music/repository/music.query.repository.interface';
 import { plainToClass } from 'class-transformer';
 import { TrackEntity } from '../entity/track/track.entity';
-
-// Todo move to http client base config
-export const BASE_URL = 'https://discoveryprovider.audius2.prod-us-west-2.staked.cloud/v1/tracks';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class MusicQueryRepository implements MusicQueryRepositoryInterface {
   private readonly _httpClient: HttpClient;
+  private readonly _baseUrl: string;
 
   constructor(@Inject(HttpClient) httpClient: HttpClient) {
     this._httpClient = httpClient;
+    this._baseUrl = environment.audius.baseUrl;
   }
 
   public listAll(search: string): Observable<TrackInterface[]> {
     return this._httpClient
-      .get<TrackInterface[]>(`${BASE_URL}/search?query=${search}&app_name=EXAMPLEAPP`)
+      .get<TrackInterface[]>(`${this._baseUrl}/search?query=${search}&app_name=EXAMPLEAPP`)
       .pipe(
         timeout({
           each: 5000,
