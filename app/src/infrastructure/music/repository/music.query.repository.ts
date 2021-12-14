@@ -18,9 +18,9 @@ export class MusicQueryRepository implements MusicQueryRepositoryInterface {
     this._httpClient = httpClient;
   }
 
-  public listAll(): Observable<TrackInterface[]> {
+  public listAll(search: string): Observable<TrackInterface[]> {
     return this._httpClient
-      .get<TrackInterface[]>(`${BASE_URL}/search?query=baauer b2b&app_name=EXAMPLEAPP`)
+      .get<TrackInterface[]>(`${BASE_URL}/search?query=${search}&app_name=EXAMPLEAPP`)
       .pipe(
         timeout({
           each: 5000,

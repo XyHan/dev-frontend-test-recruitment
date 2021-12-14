@@ -26,12 +26,23 @@ export class MusicComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listAllTracks();
+    this._musicService
+      .search
+      .subscribe(
+        (search: string) => {
+          this._loading = true;
+          this.listAllTracks(search);
+        },
+        (error: any) => {
+          console.error('MusicComponent listallTracks', error.message);
+          this._error = new Error(`Error: Impossible de récupérer les tracks`);
+        },
+      );
   }
 
-  private listAllTracks(): void {
+  private listAllTracks(search: string): void {
     this._musicService
-      .listAllPaginated(1, 6)
+      .listAllPaginated(1, 6, search)
       .subscribe(
         (paginatedTracks: PaginatedListInterface) => {
           this._tracks = paginatedTracks.items;

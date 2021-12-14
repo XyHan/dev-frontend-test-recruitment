@@ -1,3 +1,3 @@
 export interface MusicQueryRepositoryInterface {
-  listAll(): any;
+  listAll(search: string): any;
 }
