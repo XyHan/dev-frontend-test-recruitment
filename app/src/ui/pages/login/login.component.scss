@@ -58,6 +58,10 @@ main {
         }
       }
     }
+    ::ng-deep button {
+      width: 40%;
+      margin: auto;
+    }
   }
 }
 
