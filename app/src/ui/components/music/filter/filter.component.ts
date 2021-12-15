@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MusicService } from '../../../../infrastructure/music/service/music.service';
 import { MusicServiceInterface } from '../../../../domain/music/service/music.service.interface';
 
